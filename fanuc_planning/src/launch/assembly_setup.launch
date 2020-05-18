@@ -1,0 +1,9 @@
+<launch>
+
+    <node name="assembly" pkg="fanuc_planning" type="assembly.py" output="screen"/> 
+
+    <node name="validation" pkg="fanuc_planning" type="validation.py"  output="screen"/> 
+
+    <node name="reassembly" pkg="fanuc_planning" type="reassembly.py"  output="screen" /> 
+
+</launch>

@@ -1,0 +1,9 @@
+<launch>
+
+    <node name="database" pkg="fanuc_planning" type="database.py" output="screen"/> 
+
+    <node name="frp" pkg="fanuc_planning" type="frp.py"  output="screen"/> 
+
+    <node name="frp_manager" pkg="fanuc_planning" type="manager.py"  output="screen" /> 
+
+</launch>

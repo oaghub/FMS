@@ -1,0 +1,21 @@
+<launch>
+
+<!-- Independent TF listener for each one of the marks-->
+
+<node name="world_aruco_ID_0_tf_listener" pkg="fanuc_planning" type="world_aruco_id0_tf_listener.py"/> 
+<node name="world_aruco_ID_1_tf_listener" pkg="fanuc_planning" type="world_aruco_id1_tf_listener.py"/> 
+<!--<node name="world_aruco_ID_2_tf_listener" pkg="fanuc_planning" type="world_aruco_id2_tf_listener.py"/> 
+<node name="world_aruco_ID_3_tf_listener" pkg="fanuc_planning" type="world_aruco_id3_tf_listener.py"/> 
+<node name="world_aruco_ID_4_tf_listener" pkg="fanuc_planning" type="world_aruco_id4_tf_listener.py"/> -->
+
+<node name="world_aruco_ID_tf_broadcaster" pkg="fanuc_planning" type="world_aruco_tf_broadcaster.py"/>
+
+
+<!-- ADDED -->
+<node name="assembly_part_tf_broadcaster" pkg="fanuc_planning" type="assembly_part_tf_broadcaster.py"/>
+
+<!-- Independent TF listener for each one of the assembly parts-->
+<node name="world_assembly_part_id0_tf_listener" pkg="fanuc_planning" type="world_assembly_part_id0_tf_listener.py"/>
+<node name="world_assembly_part_id1_tf_listener" pkg="fanuc_planning" type="world_assembly_part_id1_tf_listener.py"/>  
+
+</launch>

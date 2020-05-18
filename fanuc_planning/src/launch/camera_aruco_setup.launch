@@ -1,0 +1,15 @@
+<launch>
+
+<!-- Enabling Astra Camera -->
+<include file="$(find astra_camera)/launch/astra_tf_prefix.launch">  </include>
+
+<!-- Enabling ArUco recognition 5 MARKS! [0,1,2,3,4]-->
+<include file="$(find aruco_ros)/launch/double.launch">  </include>
+
+<!--  TF Broadcaster for each one of the marks  ArUco from RGB Camera-->
+<node name="camera_rgb_aruco_tf_broadcaster" pkg="fanuc_planning" type="camera_rgb_aruco_tf_broadcaster.py"/> 
+
+<!-- Rotating the camera to point down (perpendicular to the workspace)-->
+<node name="set_joint_goal_pose" pkg="fanuc_planning" type="set_joint_goal_pose.py"/> 
+
+</launch>

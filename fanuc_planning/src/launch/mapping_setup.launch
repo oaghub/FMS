@@ -1,0 +1,11 @@
+<launch>
+
+<node name="scan" pkg="fanuc_planning" type="scan.py" output="screen"/> 
+
+<node name="mapping" pkg="fanuc_planning" type="mapping.py" output="screen"/> 
+
+<!-- Loading the workspace into the rviz envirorment -->
+<!-- 
+<node name="load_scene" pkg="fanuc_planning" type="scene.py"/> 
+-->
+</launch>
